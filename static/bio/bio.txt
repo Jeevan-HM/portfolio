@@ -1,0 +1,92 @@
+Name: Mr. Jeevan Hebbal Manjunath
+
+Contact Information:
+Email: jeevanhm308@gmail.com
+Phone: +919483871964
+LinkedIn: (https://www.linkedin.com/in/jeevan-h-m-7ba7b5182/)
+GitHub: (https://github.com/Jeevan-HM)
+Twitter: (https://twitter.com/Jeevan_H_M)
+Form: Submit message through the form at the end of the page.
+
+About:
+I am a self-taught AI programmer who loves to create and cooperate. I have learned machine learning and data science and built amazing projects in image processing, machine learning and generative AI. I am always curious to explore new things and work with other AI lovers and experts who share my passion.
+Education:
+Brindavan College Of Engineering, Bangalore, India
+Bachelor of Engineering, Electronics and Communication Engineering
+Aug 2023
+CGPA: 8.83/10.0 (Ranked first in the university)
+
+Professional Experience:
+Jupiter AI Labs, Bangalore, India (Freelance Machine Learning Engineer)
+Aug 2023 to Dec 2023
+Project: Lawn AI (Company Project)
+Streamlined property information extraction, achieving >90% precision in drawing boundary lines.
+Attained 95% segmentation accuracy using Yolo V8 model on a dataset of 1700+ labeled and augmented images.
+Implemented a square footage determination model with <15% mean absolute error.
+Project: Honey Bot (Company Project)
+Developed and deployed a Rasa chatbot for health-related discussions, integrating ChatGPT for improved query handling.
+Implemented a vector database for clinic recommendations, ensuring personalized assistance for user inquiries.
+
+Jupiter AI Labs, Bangalore, India (Machine Learning Intern)
+Sept 2022 to Dec 2022
+Project: Real-Time Cargo Detection and Counting (Company Project)
+Built a model for real-time detection, tracking, and counting of cargo undocked from a ship (65% accuracy).
+Implemented motion tracking using detectron2 for a 25% increase in count accuracy.
+Project: Development and Testing for UpGrad (Company Project)
+Designed exercises on topics like Flask API, Fast API, Data Processing, model training, evaluation, hyperparameter tuning, and visualization (>85% accuracy).
+Tested exercises using unit testing and pytest, achieving 95% coverage.
+
+Incipient Technologies Private Limited, Bangalore, India (Data Science Intern)
+Aug 2021 to Nov 2021
+Engaged in confidential projects focused on achieving 95% accuracy in object detection.
+Contributed to web development initiatives aimed at creating a user-friendly website.
+
+DigiLocker, Bangalore, India (Backend Development Intern)
+Sept 2020 to Dec 2020
+Project: Name Match Algorithm (Company Project)
+Developed a Flask API using fuzzy logic and soundex for similarity scoring of two names (>93% accuracy).
+Project: Real and Fake Face Detection (Company Project)
+Developed a model for real-time detection and classification of real faces from fake faces (>0.95 precision, >0.92 recall).
+
+Personal Projects:
+1. Podcast Generator with AI Voice Cloning and GPT-4 (Aug 2023 to Sept 2023)
+Created podcasts using GPT for content generation and replicated YouTube speaker voices.
+Employed advanced prompt engineering techniques to maintain 95% coherence and relevance.
+Developed a user-friendly web interface using Flask.
+
+2. FinBot (Sept 2023 to Oct 2023)
+Developed a Django web app integrating a chatbot for chatbot-related discussions.
+Achieved 95% accuracy in extracting responses from diverse sources via web scraping.
+Implemented Chromadb for efficient data storage on an AWS EC2 server.
+
+3. Health Monitoring Service (March 2023 to May 2023)
+Developed a Health Analysis Service using GPT-3.5 Turbo API for processing health data from Apple Watch.
+Achieved 93% accuracy in health assessment.
+Implemented a user-friendly website and integrated a 16x2 LCD with a Raspberry Pi.
+
+4. Automated Shopping Cart (Jun 2022 to July 2023)
+Developed a Raspberry Pi-based supermarket cart system with computer vision for 98% barcode scanning accuracy.
+Integrated a 16x2 LCD for real-time product details, purchase history, and total bill.
+Enabled seamless transactions with QR code generation for digital payments.
+
+Publications:
+[Automated Shopping Cart ResearchGate (Aug 2022)](https://www.researchgate.net/publication/362900257_Automated_Shopping_Cart)
+[Smart Health Monitoring and Analyzing Service ResearchGate (April 2023)](https://www.researchgate.net/publication/370410962_SMART_HEALTH_MONITORING_AND_ANALYZING_SERVICE)
+
+Volunteer Experience:
+Community Empowerment
+Promoted digital payments, provided education in government schools, and advocated for waste disposal management in rural areas.
+Environmental Sustainability
+Raised awareness about proper waste and water management for a cleaner and more sustainable rural environment.
+
+Skills:
+Technical Skills
+Python, Django, Flask, FastAPI, Web Development, Data Structures, Algorithm, Generative AI, AutoML, GPT, Bert, LLM, RAG, Langchain, Prompt Engineering, AI, Machine Learning, Computer Vision, Generative AI, Natural Language Processing, Node.js, React.js, Azure Machine Learning, Git, Docker, Kubernetes, Jenkins, Serverless Computing, AWS/Azure DevOps, Testability, IoT
+Soft Skills
+Leadership, Enthusiastic, Critical Thinking, Innovation, Creativity, Strategic Thinking, Teamwork, Cross-Functional Collaboration, Communication, Research, Documentation, Organization
+
+Strengths:
+Eager to learn and quick on the uptake and understanding of new technology
+
+Specializations: 
+AI, ML, Generative AI, Computer Vision

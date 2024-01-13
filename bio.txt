@@ -1,0 +1,73 @@
+Contact:
+Name: Jeevan Hebbal Manjunath
+Email: jeevanhm308@gmail.com
+Phone: (+91) 9483871964
+LinkedIn: https://www.linkedin.com/in/jeevan-h-m-7ba7b5182/
+GitHub: https://github.com/Jeevan-HM
+Twitter: https://twitter.com/Jeevan_H_M
+About:
+I am a self-taught AI programmer who loves to create and cooperate. I have learned machine learning and data science and built amazing projects in image processing, machine learning and generative AI. I am always curious to explore new things and work with other AI lovers and experts who share my passion.
+Education:
+College: Brindavan College Of Engineering, Bangalore, India
+Degree: Bachelor of Engineering in Electronics and Communication Engineering
+Graduation: 2023-08-01
+CGPA: 8.83
+Professional Experience:
+Company: Jupiter AI Labs, Bangalore, India
+Freelance (Aug 2023 - Nov 2023):
+Position: Machine Learning Engineer
+Projects:
+Lawn AI
+Streamlined property information extraction (precision > 90%)
+Achieved 95% segmentation accuracy (Yolo V8 model)
+Implemented square footage model (MAE < 15%)
+Honey Bot
+Developed and deployed Rasa chatbot (ChatGPT integration)
+Vector database for clinic recommendations (personalized assistance)
+Intern (Sept 2022 - Dec 2022):
+Position: Machine Learning Intern
+Projects:
+Real-Time Cargo Detection and Counting
+Built 65% accurate model for real-time cargo detection/counting
+25% accuracy increase using detectron2 for motion tracking
+Development and Testing for UpGrad
+Designed 85%+ accurate exercises (Flask API, Fast API, etc.)
+95% coverage with unit testing and pytest
+Incipient Technologies Private Limited, Bangalore, India (Intern: Aug 2021 - Nov 2021):
+Confidential projects: object detection (95% accuracy)
+Web development for user-friendly website
+DigiLocker, Bangalore, India (Intern: Sept 2020 - Dec 2020):
+Projects:
+Name Match Algorithm
+Flask API for name similarity (fuzzy logic, soundex)
+Unit testing and 93%+ accuracy evaluation
+Real and Fake Face Detection
+Model for real-time face detection/classification (precision 0.95, recall 0.92)
+Projects:
+Podcast Generator with AI Voice Cloning and GPT-4 (Aug 2023 - Sept 2023)
+Created GPT-powered podcasts with Eleven Labs voice replication
+Advanced prompt engineering (95% coherence, high-quality audio)
+User-friendly Flask web interface
+FinBot (Sept 2023 - Oct 2023)
+Django web app with chatbot for chatbot discussions
+95% accuracy in web scraping for diverse response extraction
+90% improvement in conversational fluency via GPT fine-tuning (LangChain)
+Secure and seamless deployment with ChromaDB on AWS EC2
+Health Monitoring Service (March 2023 - May 2023)
+GPT-3.5 Turbo API for health data analysis from Apple Watch
+Comprehensive health assessments, risk identification, personalized recommendations
+User-friendly website and Raspberry Pi-integrated LCD for convenient access
+93% accuracy in health assessment
+Automated Shopping Cart (Jun 2022 - July 2023)
+Raspberry Pi-based supermarket cart system with 98% barcode scanning accuracy
+16x2 LCD for real-time product details, purchase history, total bill
+Seamless transactions with QR code generation for digital payments
+Publications:
+Automated Shopping Cart - ResearchGate (Aug 2022)
+Smart Health Monitoring and Analyzing Service - ResearchGate (April 2023)
+Volunteer Experience:
+Community Empowerment: digital payments, education in government schools, waste disposal management
+Environmental Sustainability: awareness about waste and water management
+Skills:
+Technical: Python, Django, Flask, FastAPI, Web Dev, Data Structures, Algorithms, Generative AI, AutoML, GPT, Bert, LLM, RAG, Langchain, Prompt Engineering, AI, ML, Computer Vision, NLP, Node.js, React.js, Azure ML, Git, Docker, Kubernetes, Jenkins, Serverless Computing, AWS/Azure DevOps, Testability, IoT
+Soft: Leadership, Enthusiasm, Critical Thinking, Innovation, Creativity, Strategic Thinking, Teamwork, Cross-Functional Collaboration, Communication, Research,
