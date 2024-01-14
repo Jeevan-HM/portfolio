@@ -630,7 +630,7 @@ Contributed to web development initiatives aimed at creating a user-friendly web
     <script src="/static/lib/isotope/isotope.pkgd.min.js"></script>
     <script src="/static/lib/lightbox/js/lightbox.min.js"></script>
     <!-- Javascript -->
-    <script src="/static/main.js"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
     <script>
       $SCRIPT_ROOT = {{ request.script_root|tojson }};
     </script>
