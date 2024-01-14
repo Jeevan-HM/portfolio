@@ -14,8 +14,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 
 # Load environment variables from the .env file
-ENV PATH="/app:${PATH}"
-COPY .env /app/.env
+ENV OPENAI_API_KEY=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
+
 
 # Define environment variable
 ENV NAME World
