@@ -468,10 +468,32 @@ Contributed to web development initiatives aimed at creating a user-friendly web
         >
         <i src="https://loading.io/asset/715372"></i>
           <p>My Publications</p>
-          <h2>Latest Research Paper</h2>
+          <h2>Blog</h2>
         </div>
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-4">
+            <div class="blog-item wow fadeInUp" data-wow-delay="0.1s">
+              <div class="blog-img">
+                <img src="/static/images/blog-3.jpg" alt="Blog" />
+              </div>
+              <div class="blog-text">
+                <h2>Code Crafted</h2>
+                <div class="blog-meta">
+                  <p><i class="far fa-user"></i>Admin</p>
+                  <p><i class="far fa-list-alt"></i>IoT</p>
+                  <p><i class="far fa-calendar-alt"></i>August 2022</p>
+                </div>
+                <p>
+                  Welcome to Code Crafted, your go-to destination for a deep dive into the dynamic world of artificial intelligence! Immerse yourself in our blog where we channel our enthusiasm for AI and its ever-evolving landscape. Intrigued by the swift strides in this field, we are committed to delivering insightful content that not only explores the latest technologies but also delves into the pivotal research papers that have played a groundbreaking role in propelling AI forward. Join us on this journey as we unravel the intricacies of cutting-edge advancements and showcase the driving forces shaping the future of artificial intelligence.
+
+                </p>
+                <a class="btn btn-read-more" href="https://www.notion.so/researchpaper101/Code-Crafted-Blogs-b02fa4f8fed94e23b41850140c3a8b71?pvs=4"
+                  >Read More <i class="fa fa-angle-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
             <div class="blog-item wow fadeInUp" data-wow-delay="0.1s">
               <div class="blog-img">
                 <img src="/static/images/blog-1.jpg" alt="Blog" />
@@ -486,13 +508,13 @@ Contributed to web development initiatives aimed at creating a user-friendly web
                 <p>
                     This system aims to streamline the checkout process in shopping centers by using a smart shopping cart. The cart displays the total price of the items in real-time, allowing customers to plan their budget effectively. Instead of traditional scanning at the counter, the cart has a barcode scanner and a touchscreen display for product information and payment processing. Customers can either pay directly at the cart using a generated UPI QR code or at a designated counter, reducing wait times and potential errors at the billing counter. This automated approach enhances efficiency and improves the overall shopping experience.
                 </p>
-                <a class="btn" href="https://www.researchgate.net/publication/362900257_Automated_Shopping_Cart"
+                <a class="btn btn-read-more" href="https://www.researchgate.net/publication/362900257_Automated_Shopping_Cart"
                   >Read More <i class="fa fa-angle-right"></i
                 ></a>
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-4">
             <div class="blog-item wow fadeInUp" data-wow-delay="0.3s">
               <div class="blog-img">
                 <img src="/static/images/blog-2.jpg" alt="Blog" />
@@ -507,7 +529,7 @@ Contributed to web development initiatives aimed at creating a user-friendly web
                 <p>
                     This service simplifies health tracking and improvement. Integrated with a smartwatch, it monitors real-time health metrics like heart rate, oxygen saturation, and body temperature. This enables precise and personalized health recommendations. The service identifies potential health risks, offering tailored suggestions, such as stress-reducing activities for elevated heart rates or sleep improvement strategies. Beyond smartwatch features, it includes personalized meal plans, workouts, and medication guidance. Accessible to everyone, it addresses diverse health needs, from athletes optimizing performance to busy parents seeking balance. Empowering users to proactively manage their health, the service contributes to longer, healthier lives.
                 </p>
-                <a class="btn" href="https://www.researchgate.net/publication/370410962_SMART_HEALTH_MONITORING_AND_ANALYZING_SERVICE"
+                <a class="btn btn-read-more" href="https://www.researchgate.net/publication/370410962_SMART_HEALTH_MONITORING_AND_ANALYZING_SERVICE"
                   >Read More <i class="fa fa-angle-right"></i
                 ></a>
               </div>
@@ -547,9 +569,11 @@ Contributed to web development initiatives aimed at creating a user-friendly web
               <input type="email" name="Email" placeholder="Your Email" required>
               <input type="Subject" name="Subject" placeholder="Subject" required>
               <textarea name="Message" rows="3" placeholder="Message"></textarea>
-              <button type="submit" class="btn form-submit">Submit</button>
+              <div id="typing-system-container" class="messages__item messages__item--visitor">
+                <button type="submit" class="btn form-submit">Submit</button>
+                <span id="msg"></span>
+              </div>
             </form>
-            <span id="msg"></span>
           </div>
         </div>
         </div>
@@ -605,30 +629,44 @@ Contributed to web development initiatives aimed at creating a user-friendly web
     <script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="/static/lib/isotope/isotope.pkgd.min.js"></script>
     <script src="/static/lib/lightbox/js/lightbox.min.js"></script>
-
     <!-- Javascript -->
     <script src="/static/main.js"></script>
     <script>
       $SCRIPT_ROOT = {{ request.script_root|tojson }};
     </script>
-    <scrip type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
 
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbxgPJkwPPLP1CV8lFFxfrN9cByAHEcJ5M5pV7yzVcZBAyDFKBvKqZy-uw-98Of4nBK1/exec'
       const form = document.forms['submit-to-google-sheet']
       const msg = document.getElementById('msg') 
+      var html = ''
+      
+      html += '<svg id="typing-system" height="40" width="40" class="loader typing-submit">'
+      html += '<circle class="dot dot1" cx="10" cy="20" r="3" style="fill:#ED798E;" />'
+      html += '<circle class="dot dot2" cx="20" cy="20" r="3" style="fill:#EEB575;" />'
+      html += '<circle class="dot dot3" cx="30" cy="20" r="3" style="fill:#6963B1;" />'
+      html += '</svg>'
       form.addEventListener('submit', e => {
         e.preventDefault()
+        msg.innerHTML = html
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
           .then(response => {
-            msg.innerHTML = "Message Sent!"
+            msg.innerHTML = ""
+            html = ""
+            html += '<svg viewBox="0 0 26 26" class="success-tick">'
+            html += '<g stroke="currentColor" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">'
+            html += '<path class="circle" d="M13 1C6.372583 1 1 6.372583 1 13s5.372583 12 12 12 12-5.372583 12-12S19.627417 1 13 1z"/>'
+            html += '<path class="tick" d="M6.5 13.5L10 17 l8.808621-8.308621"/>'
+            html += '</g>'
+            html += '</svg>'
+            msg.innerHTML = html
             setTimeout(function(){
               msg.innerHTML = ""
-            }, 5000)
+            }, 15000)
             form.reset()
           })
           .catch(error => console.error('Error!', error.message))
       })
-    </>
+    </script>
   </body>
 </html>
