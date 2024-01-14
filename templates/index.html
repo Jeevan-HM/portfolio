@@ -25,12 +25,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
       rel="stylesheet"
     />
-    <link href="/static/lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link href="/static/lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
-
+    <link href="{{ url_for('static', filename='lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
     <!-- Stylesheet -->
-    <link href="/static/style.css" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
   </head>
 
   <body data-spy="scroll" data-target=".navbar" data-offset="51">
