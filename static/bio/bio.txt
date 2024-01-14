@@ -2,10 +2,10 @@ Name: Mr. Jeevan Hebbal Manjunath
 
 Contact Information:
 Email: jeevanhm308@gmail.com
-Phone: +919483871964
-LinkedIn: (https://www.linkedin.com/in/jeevan-h-m-7ba7b5182/)
-GitHub: (https://github.com/Jeevan-HM)
-Twitter: (https://twitter.com/Jeevan_H_M)
+Phone: 9483871964
+LinkedIn: https://www.linkedin.com/in/jeevan-h-m-7ba7b5182/
+GitHub: https://github.com/Jeevan-HM
+Twitter: https://twitter.com/Jeevan_H_M
 Form: Submit message through the form at the end of the page.
 
 About:
@@ -70,8 +70,8 @@ Integrated a 16x2 LCD for real-time product details, purchase history, and total
 Enabled seamless transactions with QR code generation for digital payments.
 
 Publications:
-[Automated Shopping Cart ResearchGate (Aug 2022)](https://www.researchgate.net/publication/362900257_Automated_Shopping_Cart)
-[Smart Health Monitoring and Analyzing Service ResearchGate (April 2023)](https://www.researchgate.net/publication/370410962_SMART_HEALTH_MONITORING_AND_ANALYZING_SERVICE)
+1. Automated Shopping Cart ResearchGate (Aug 2022): https://www.researchgate.net/publication/362900257_Automated_Shopping_Cart
+2. Smart Health Monitoring and Analyzing Service ResearchGate (April 2023): https://www.researchgate.net/publication/370410962_SMART_HEALTH_MONITORING_AND_ANALYZING_SERVICE
 
 Volunteer Experience:
 Community Empowerment

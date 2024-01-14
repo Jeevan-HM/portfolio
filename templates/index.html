@@ -13,7 +13,9 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
     <!-- CSS Libraries -->
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -464,8 +466,9 @@ Contributed to web development initiatives aimed at creating a user-friendly web
           class="section-header text-center wow zoomIn"
           data-wow-delay="0.1s"
         >
+        <i src="https://loading.io/asset/715372"></i>
           <p>My Publications</p>
-          <h2>Latest Articles</h2>
+          <h2>Latest Research Paper</h2>
         </div>
         <div class="row">
           <div class="col-lg-6">
@@ -535,7 +538,7 @@ Contributed to web development initiatives aimed at creating a user-friendly web
                 <a href="https://www.linkedin.com/in/jeevan-h-m-7ba7b5182/"><i class="fab fa-linkedin-in"></i></a>
                   <br>
               </div>
-              <a href="https://drive.google.com/file/d/1byqfSEmBDBTYIGkzUYDhjzv5vYRkdwUb/view?usp=sharing"class="btn download" download="Jeevan H M Resume">Download CV</a>
+              <a href="https://drive.google.com/file/d/11z5UF0qiVZ__1u6kJolsSxHFQxd4qJEX/view?usp=sharing"class="btn download" download="Jeevan H M Resume">Download CV</a>
           </div>
           </div>
           <div class="contact-right">
@@ -555,21 +558,32 @@ Contributed to web development initiatives aimed at creating a user-friendly web
     <!-- Contact End -->
 
     <!-- Chatbot Start -->
+    <div class="container">
+      <div class="chatbox">
+          <div class="chatbox__support">
+              <div class="chatbox__header">
+                  <div class="chatbox__image--header">
+                      <img src="https://img.icons8.com/color/48/000000/circled-user-male-skin-type-4--v1.png" alt="image">
+                  </div>
+                  <div class="chatbox__content--header">
+                      <h4 class="chatbox__heading--header">Chat support</h4>
+                      <p class="chatbox__description--header">Hi. My name is J.A.I.D. How can I help you?</p>
+                  </div>
+              </div>
+              <div class="chatbox__messages">
+                  <div></div>
+              </div>
+              <div class="chatbox__footer">
+                  <input type="text" placeholder="Write a message...">
+                  <button class="btn chatbox__send--footer send__button">&#x27A4;</button>
 
-    <div class="chatbot-container">
-      <div class="chatbot-button">
-          <span>&#x1F5E3;</span> <!-- Unicode character for chat icon -->
-      </div>
-      <div class="chatbot-popup">
-          <div class="chatbot-header">
-              <span>Chatbot</span>
-              <button class="close-chatbot">&times;</button>
+                </div>
           </div>
-          <div class="chatbot-content">
-              <p>Welcome</p>
+          <div class="chatbox__button">
+              <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
           </div>
       </div>
-    </div>
+  </div>
 
   <!-- Chatbot End -->
 
@@ -592,14 +606,13 @@ Contributed to web development initiatives aimed at creating a user-friendly web
     <script src="/static/lib/isotope/isotope.pkgd.min.js"></script>
     <script src="/static/lib/lightbox/js/lightbox.min.js"></script>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
     <!-- Javascript -->
     <script src="/static/main.js"></script>
-  
-    
+    <script>
+      $SCRIPT_ROOT = {{ request.script_root|tojson }};
+    </script>
+    <scrip type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbxgPJkwPPLP1CV8lFFxfrN9cByAHEcJ5M5pV7yzVcZBAyDFKBvKqZy-uw-98Of4nBK1/exec'
       const form = document.forms['submit-to-google-sheet']
@@ -616,6 +629,6 @@ Contributed to web development initiatives aimed at creating a user-friendly web
           })
           .catch(error => console.error('Error!', error.message))
       })
-    </script>
+    </>
   </body>
 </html>
