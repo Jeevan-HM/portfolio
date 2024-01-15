@@ -19,14 +19,15 @@ class CreateDocument:
         """
         from langchain_community.document_loaders import DirectoryLoader
 
+        load_dotenv()
         self.loader = DirectoryLoader("static/bio")
 
     def create_documents(self):
         """
+
         The function `create_documents` creates and saves a FAISS index for a collection of documents,
         using OpenAI embeddings and a text splitter.
         """
-        load_dotenv()
         self.embeddings = OpenAIEmbeddings()
         docs = self.loader.load()
         text_splitter = RecursiveCharacterTextSplitter(

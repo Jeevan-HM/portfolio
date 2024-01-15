@@ -25,11 +25,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
       rel="stylesheet"
     />
-    <link href="{{ url_for('static', filename='lib/animate/animate.min.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
+    <link href="/static/lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="/static/lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
     <!-- Stylesheet -->
-    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+    <link href="/static/style.css" rel="stylesheet" />
   </head>
 
   <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -629,7 +630,7 @@ Contributed to web development initiatives aimed at creating a user-friendly web
     <script src="/static/lib/isotope/isotope.pkgd.min.js"></script>
     <script src="/static/lib/lightbox/js/lightbox.min.js"></script>
     <!-- Javascript -->
-    <script src="{{ url_for('static', filename='main.js') }}"></script>
+    <script src="/static/main.js"></script>
     <script>
       $SCRIPT_ROOT = {{ request.script_root|tojson }};
     </script>
