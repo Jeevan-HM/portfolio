@@ -31,8 +31,7 @@ a:hover,
 
 .contact-link:hover {
     color: #414141;
-    background: #fff;
-    border-color: #ff004f;
+    color: #ff004f;
     box-shadow: inset 0 0 0 0 #ff004f;
     text-decoration: none;
   }
@@ -330,7 +329,7 @@ a:focus {
     .hero-row {
     display: flex;
     padding-top:200px;
-    padding-left:150px;
+    padding-left: 150px;
     }
 }
 .hero .container-fluid {
@@ -389,7 +388,6 @@ a:focus {
 
 .hero .hero-text .typed-text {
     display: none;
-
 }
 
 .hero .hero-text .typed-cursor {
@@ -482,7 +480,15 @@ a:focus {
     .hero .hero-text p {
         font-size: 16px;
     }
-    
+    .hero-row {
+        padding-left: 0;
+    }
+    .contact-left{
+        flex-basis: 100% !important; 
+    }
+    .contact-right{
+        flex-basis: 100% !important;
+    }
     .hero .hero-text h1 {
         font-size: 30px;
     }
@@ -1062,13 +1068,16 @@ a:focus {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: rgba(256, 256, 256, .5);
 }
 
 .testimonial .owl-dot.active {
     background: #ffffff;
 }
 
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot{
+    background: #9a9a9a;
+
+}
 
 /*******************************/
 /*********** Blog CSS **********/
@@ -1300,7 +1309,13 @@ form input, form textarea{
     .contact-social{
         font-size: 20px;
     }
-
+    .contact-left{
+        flex-basis: 50%;
+    }
+    .contact-right{
+        flex-basis: 50%;
+    }
+    
 }
 @media (min-width: 700px) {
     body{
@@ -1313,7 +1328,6 @@ form input, form textarea{
     .contact-me{
         font-size: 40px;
     }
-    
     .contact-info h2{
         font-size: 20px;
     }
@@ -1530,6 +1544,7 @@ form input, form textarea{
 .chatbox__button button:focus,
 .chatbox__button button:visited {
     padding: 10px;
+    margin-right: 10px;
     background: white;
     border: none;
     outline: none;

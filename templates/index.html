@@ -2,11 +2,11 @@
 <html lang="en">
   <head>
     
-    <title>Jeevan Hebbal Manjunath Portfolio</title>
+    <title>Jeevan Hebbal Manjunath</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
     <!-- Favicon -->
-    <link href="/static/images/favicon.ico" rel="icon" />
+    <link href="{{ url_for('static', filename='images/favicon.ico') }}" rel="icon" />
 
     <!-- Google Font -->
     <link
@@ -25,12 +25,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
       rel="stylesheet"
     />
-    <link href="/static/lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link href="/static/lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet" />
 
     <!-- Stylesheet -->
-    <link href="/static/style.css" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" />
+
   </head>
 
   <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -102,7 +103,7 @@
         <div class="row align-items-center">
           <div class="col-lg-6">
             <div class="about-img">
-              <img src="/static/images/about.jpg" alt="Image" />
+              <img src="{{ url_for('static', filename='images/about.jpg') }}" alt="Image" />
             </div>
           </div>
           <div class="col-lg-6">
@@ -337,7 +338,7 @@ Contributed to web development initiatives aimed at creating a user-friendly web
           >
             <div class="portfolio-wrap">
               <div class="portfolio-img">
-                <img src="/static/images/portfolio-1.jpg" alt="Image" />
+                <img src="{{ url_for('static', filename='images/portfolio-1.jpg') }}" alt="Image" />
               </div>
               <div class="portfolio-text">
                 <h3>AI Podcast Generator</h3>
@@ -355,7 +356,7 @@ Contributed to web development initiatives aimed at creating a user-friendly web
           >
             <div class="portfolio-wrap">
               <div class="portfolio-img">
-                <img src="/static/images/portfolio-2.jpg" alt="Image" />
+                <img src="{{ url_for('static', filename='images/portfolio-2.jpg') }}" alt="Image" />
               </div>
               <div class="portfolio-text">
                 <h3>FinBot Assistant</h3>
@@ -373,7 +374,7 @@ Contributed to web development initiatives aimed at creating a user-friendly web
           >
             <div class="portfolio-wrap">
               <div class="portfolio-img">
-                <img src="/static/images/portfolio-3.jpg" alt="Image" />
+                <img src="{{ url_for('static', filename='images/portfolio-3.jpg') }}" alt="Image" />
               </div>
               <div class="portfolio-text">
                 <h3>Health Monitor</h3>
@@ -391,7 +392,7 @@ Contributed to web development initiatives aimed at creating a user-friendly web
           >
             <div class="portfolio-wrap">
               <div class="portfolio-img">
-                <img src="/static/images/portfolio-4.jpg" alt="Image" />
+                <img src="{{ url_for('static', filename='images/portfolio-4.jpg') }}" alt="Image" />
               </div>
               <div class="portfolio-text">
                 <h3>Automated Shopping Cart</h3>
@@ -404,7 +405,7 @@ Contributed to web development initiatives aimed at creating a user-friendly web
             </div>
           </div>
         </div>
-        <a href="" class="more btn">See more</a>
+        <a href="https://github.com/Jeevan-HM" class="more btn">See more</a>
       </div>
     </div>
     <!-- Portfolio End -->
@@ -419,7 +420,7 @@ Contributed to web development initiatives aimed at creating a user-friendly web
         <div class="owl-carousel testimonials-carousel">
           <div class="testimonial-item">
             <div class="testimonial-img">
-              <img src="/static/images/testimonial-1.jpg" alt="Image" />
+              <img src="{{ url_for('static', filename='images/testimonial-1.jpg') }}" alt="Image" />
             </div>
             <div class="testimonial-text">
               <p>
@@ -431,7 +432,7 @@ Contributed to web development initiatives aimed at creating a user-friendly web
           </div>
           <div class="testimonial-item">
             <div class="testimonial-img">
-              <img src="/static/images/testimonial-2.jpg" alt="Image" />
+              <img src="{{ url_for('static', filename='images/testimonial-2.jpg') }}" alt="Image" />
             </div>
             <div class="testimonial-text">
               <p>
@@ -443,7 +444,7 @@ Contributed to web development initiatives aimed at creating a user-friendly web
           </div>
           <div class="testimonial-item">
             <div class="testimonial-img">
-              <img src="/static/images/testimonial-3.jpg" alt="Image" />
+              <img src="{{ url_for('static', filename='images/testimonial-3.jpg') }}" alt="Image" />
             </div>
             <div class="testimonial-text">
               <p>
@@ -468,13 +469,13 @@ Contributed to web development initiatives aimed at creating a user-friendly web
         >
         <i src="https://loading.io/asset/715372"></i>
           <p>My Publications</p>
-          <h2>Blog</h2>
+          <h2>My Latest Articles</h2>
         </div>
         <div class="row">
           <div class="col-lg-4">
             <div class="blog-item wow fadeInUp" data-wow-delay="0.1s">
               <div class="blog-img">
-                <img src="/static/images/blog-3.jpg" alt="Blog" />
+                <img src="{{ url_for('static', filename='images/blog-3.jpg') }}" alt="Blog" />
               </div>
               <div class="blog-text">
                 <h2>Code Crafted</h2>
@@ -496,7 +497,7 @@ Contributed to web development initiatives aimed at creating a user-friendly web
           <div class="col-lg-4">
             <div class="blog-item wow fadeInUp" data-wow-delay="0.1s">
               <div class="blog-img">
-                <img src="/static/images/blog-1.jpg" alt="Blog" />
+                <img src="{{ url_for('static', filename='images/blog-1.jpg') }}" alt="Blog" />
               </div>
               <div class="blog-text">
                 <h2>Automated Shopping Cart</h2>
@@ -517,7 +518,7 @@ Contributed to web development initiatives aimed at creating a user-friendly web
           <div class="col-lg-4">
             <div class="blog-item wow fadeInUp" data-wow-delay="0.3s">
               <div class="blog-img">
-                <img src="/static/images/blog-2.jpg" alt="Blog" />
+                <img src="{{ url_for('static', filename='images/blog-2.jpg') }}" alt="Blog" />
               </div>
               <div class="blog-text">
                 <h2>Health Monitoring System</h2>
@@ -622,15 +623,16 @@ Contributed to web development initiatives aimed at creating a user-friendly web
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="/static/lib/easing/easing.min.js"></script>
-    <script src="/static/lib/wow/wow.min.js"></script>
-    <script src="/static/lib/waypoints/waypoints.min.js"></script>
-    <script src="/static/lib/typed/typed.min.js"></script>
-    <script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="/static/lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="/static/lib/lightbox/js/lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="{{ url_for('static', filename='waypoints.min.js') }}""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
     <!-- Javascript -->
-    <script src="/static/main.js"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+    
     <script>
       $SCRIPT_ROOT = {{ request.script_root|tojson }};
     </script>

@@ -4,8 +4,6 @@ from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from dotenv import load_dotenv
-import os
 from langchain.prompts import PromptTemplate
 
 
@@ -19,7 +17,6 @@ class CreateDocument:
         """
         from langchain_community.document_loaders import DirectoryLoader
 
-        load_dotenv()
         self.loader = DirectoryLoader("static/bio")
 
     def create_documents(self):
@@ -47,7 +44,6 @@ class RAGChain:
         The above function initializes various components for a chatbot, including loading embeddings,
         creating a vector store, setting up a retriever, and initializing a language model.
         """
-        load_dotenv()
         self.embeddings = OpenAIEmbeddings()
         self.vectorstore = FAISS.load_local("faiss_index", self.embeddings)
         self.retriever = self.vectorstore.as_retriever()

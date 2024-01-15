@@ -57,17 +57,22 @@
     });
     
     
-    // Typed Initiate
-    if ($('.hero .hero-text h2').length == 1) {
-        var typed_strings = $('.hero .hero-text .typed-text').text();
-        var typed = new Typed('.hero .hero-text h2', {
-            strings: typed_strings.split(', '),
-            typeSpeed: 100,
-            backSpeed: 20,
-            smartBackspace: false,
-            loop: true
-        });
-    }
+    $(document).ready(function () {
+        if ($('.hero .hero-text h2').length === 1) {
+            var typed_strings = $('.hero .hero-text .typed-text').text();
+            var typed = new Typed('.hero .hero-text h2', {
+                strings: typed_strings.split(', '),
+                typeSpeed: 100,
+                backSpeed: 20,
+                smartBackspace: false,
+                loop: true
+            });
+        }
+    
+        // ... other code ...
+    });
+    
+    
     
     
     // Skills
@@ -104,31 +109,11 @@
         $(this).addClass('filter-active');
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
-
-    // Chatbot
-    document.addEventListener('DOMContentLoaded', function () {
-        const chatbotContainer = document.querySelector('.chatbot-container');
-        const chatbotButton = document.querySelector('.chatbot-button');
-        const closeChatbotButton = document.querySelector('.close-chatbot');
-
-        chatbotButton.addEventListener('click', function () {
-            chatbotContainer.classList.toggle('active');
-        });
-
-        closeChatbotButton.addEventListener('click', function () {
-            chatbotContainer.classList.remove('active');
-        });
-    });
-
-    // Chatbot response
-    function sendMessage() {
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', '/hello', true);
-        xhr.send();
-    }
-
-
+    
 })(jQuery);
+
+
+
 
 
 class Chatbox {

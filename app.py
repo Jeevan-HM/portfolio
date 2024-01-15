@@ -1,7 +1,14 @@
 from flask import Flask, render_template, request, jsonify
 import chatbot
 from dotenv import load_dotenv
+import os
+from flask_cors import CORS
+
+load_dotenv()
+
 app = Flask(__name__, static_folder="static")
+CORS(app)
+app.config["DEBUG"] = os.environ.get("FLASK_DEBUG")
 
 
 @app.route("/", methods=["GET"])
@@ -30,4 +37,4 @@ def chat_with_user():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=800)
+    app.run(debug=True)
