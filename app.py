@@ -7,7 +7,6 @@ from flask_cors import CORS
 load_dotenv()
 
 app = Flask(__name__, static_folder="static")
-CORS(app)
 app.config["DEBUG"] = os.environ.get("FLASK_DEBUG")
 
 

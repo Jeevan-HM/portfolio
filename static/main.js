@@ -1,7 +1,7 @@
 (function ($) {
     "use strict";
-    
-    // loader
+
+    // Loader
     var loader = function () {
         setTimeout(function () {
             if ($('#loader').length > 0) {
@@ -10,12 +10,10 @@
         }, 1);
     };
     loader();
-    
-    
+
     // Initiate the wowjs
     new WOW().init();
-    
-    
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {
@@ -28,8 +26,7 @@
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
     });
-    
-    
+
     // Sticky Navbar
     $(window).scroll(function () {
         if ($(this).scrollTop() > 0) {
@@ -39,27 +36,28 @@
         }
     });
     
-    
     // Smooth scrolling on the navbar links
     $(".navbar-nav a").on('click', function (event) {
         if (this.hash !== "") {
             event.preventDefault();
-            
+
             $('html, body').animate({
                 scrollTop: $(this.hash).offset().top - 45
             }, 1500, 'easeInOutExpo');
-            
+
             if ($(this).parents('.navbar-nav').length) {
                 $('.navbar-nav .active').removeClass('active');
                 $(this).closest('a').addClass('active');
             }
         }
     });
-    
-    
+
+    // Typed Initiate
     $(document).ready(function () {
-        if ($('.hero .hero-text h2').length === 1) {
-            var typed_strings = $('.hero .hero-text .typed-text').text();
+        var typedTextElements = $('.hero .hero-text .typed-text');
+
+        if (typedTextElements.length === 1) {
+            var typed_strings = typedTextElements.text();
             var typed = new Typed('.hero .hero-text h2', {
                 strings: typed_strings.split(', '),
                 typeSpeed: 100,
@@ -68,20 +66,15 @@
                 loop: true
             });
         }
-    
-        // ... other code ...
     });
-    
-    
-    
-    
+
+
     // Skills
     $('.skills').waypoint(function () {
         $('.progress .progress-bar').each(function () {
             $(this).css("width", $(this).attr("aria-valuenow") + '%');
         });
     }, {offset: '80%'});
-
 
     // Testimonials carousel
     $(".testimonials-carousel").owlCarousel({
@@ -90,14 +83,12 @@
         dots: true,
         loop: true,
         responsive: {
-            0:{
-                items:1
+            0: {
+                items: 1
             }
         }
     });
-    
-    
-    
+
     // Portfolio filter
     var portfolioIsotope = $('.portfolio-container').isotope({
         itemSelector: '.portfolio-item',
@@ -109,19 +100,15 @@
         $(this).addClass('filter-active');
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
-    
+
 })(jQuery);
-
-
-
-
 
 class Chatbox {
     constructor() {
         this.args = {
-            openButton: document.querySelector('.chatbox__button button'), 
+            openButton: document.querySelector('.chatbox__button button'),
             chatBox: document.querySelector('.chatbox__support'),
-            sendButton: document.querySelector('.send__button') 
+            sendButton: document.querySelector('.send__button')
         };
         this.state = false;
         this.messages = [];
@@ -162,7 +149,7 @@ class Chatbox {
 
         fetch('/chat', {
             method: 'POST',
-            body: JSON.stringify({ message: text1 }), 
+            body: JSON.stringify({ message: text1 }),
             mode: 'cors',
             headers: {
                 'Content-Type': 'application/json'
@@ -181,22 +168,22 @@ class Chatbox {
         })
         .then(r => this.removeTypingIndicator(chatbox));
     }
+
     removeTypingIndicator(chatbox) {
         var element = document.getElementById("typing-system");
-        console.log("Got element")
         if (element) {
             element.remove();
         }
-        console.log("Removed element")
-    }    
+    }
+
     updateChatText(chatbox) {
         var html = '';
         var isTypingIndicatorAdded = false; // Flag to track if the typing indicator is added
-    
+
         this.messages.slice().reverse().forEach(function (item, index) {
             // Escape HTML to prevent XSS
             const escapedMessage = escapeHtml(item.message);
-    
+
             if (item.name === "J.A.I.D") {
                 html += '<div class="messages__item messages__item--visitor">' + linkify(escapedMessage) + '</div>';
             } else {
@@ -211,20 +198,22 @@ class Chatbox {
                     isTypingIndicatorAdded = true;
                 }
                 html += '<div class="messages__item messages__item--operator">' + linkify(escapedMessage) + '</div>';
-    
+
             }
         });
-    
+
         const chatmessage = chatbox.querySelector('.chatbox__messages');
         chatmessage.innerHTML = html;
     }
-}    
+}
+
 function escapeHtml(html) {
     var text = document.createTextNode(html);
     var div = document.createElement('div');
     div.appendChild(text);
     return div.innerHTML;
 }
+
 function linkify(message) {
     // Replace URLs, email addresses, and phone numbers with clickable links and mentions
     message = message.replace(/(https?:\/\/[^\s]+)/g, function (url) {
@@ -246,25 +235,31 @@ function linkify(message) {
     return message;
 }
 
-
-
-
 function getLinkMention(url) {
     // Add logic to determine the mention based on the URL
     if (url.includes('linkedin.com')) {
         return 'Linkedin Profile';
-    } else if (url.includes('github.com')) {
-        // Default mention if no specific mention is defined
+    } else if (url.includes('Jeevan-HM/AI-podcast')){
+        return 'AI Podcast';
+    } else if (url.includes('Jeevan-HM/FinBot')){
+        return 'FinBot';
+    } else if (url.includes('Jeevan-HM/Health-Analyzing-Service')){
+        return 'Health Analyzing Service';
+    } else if (url.includes('Jeevan-HM/Automated-Shopping-Cart')){
+        return 'Automated Shopping Cart';
+    } else if (url.includes('github.com/Jeevan-HM')) {
         return 'Github Profile';
     } else if (url.includes('twitter.com')) {
         return 'Twitter Profile';
-    } else if (url.includes('Automated_Shopping_Cart')){
+    } else if (url.includes('publication/362900257_Automated_Shopping_Cart')){
         return 'Automated Shopping Cart';
-    } else if (url.includes('SMART_HEALTH_MONITORING_AND_ANALYZING_SERVICE')){
-        return 'Health Analyzing Service'
+    } else if (url.includes('publication/370410962_SMART_HEALTH_MONITORING_AND_ANALYZING_SERVICE')){
+        return 'Health Analyzing Service';
     } 
+    else {
+        return url; 
+    }
 }
 
 const chatbox = new Chatbox();
 chatbox.display();
-

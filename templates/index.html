@@ -3,99 +3,76 @@
   <head>
     
     <title>Jeevan Hebbal Manjunath</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
     <link href="{{ url_for('static', filename='images/favicon.ico') }}" rel="icon" />
 
     <!-- Google Font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
     <!-- CSS Libraries -->
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet">
 
     <!-- Stylesheet -->
-    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
 
   </head>
 
   <body data-spy="scroll" data-target=".navbar" data-offset="51">
-    <!-- Nav Bar Start -->
-    
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-      
-      <a href="index.html" class="navbar-brand"><span class="brand-letter">J</span>eevan H M</a>
-        <button
-          type="button"
-          class="navbar-toggler"
-          data-toggle="collapse"
-          data-target="#navbarCollapse"
-        >
-        
+     <!-- Nav Bar Start -->
+     <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <a href="/" class="navbar-brand"><span class="brand-letter">J</span>eevan H M</a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
           <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div
-          class="collapse navbar-collapse justify-content-end "
-          id="navbarCollapse"
-        >
-          <ul class="navbar-nav ">
-            <li class="nav-item active"><a href="#home" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
-            <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
-            <li class="nav-item"><a href="#review" class="nav-link">Recommendation</a></li>
-            <li class="nav-item"><a href="#blog" class="nav-link">Reviews</a></li>
-            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+          <ul class="navbar-nav">
+              <li class="nav-item active"><a href="#home" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+              <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+              <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+              <li class="nav-item"><a href="#review" class="nav-link">Recommendation</a></li>
+              <li class="nav-item"><a href="#blog" class="nav-link">Reviews</a></li>
+              <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
-        </div>
-      </nav>
-    <!-- Nav Bar End -->
+      </div>
+  </div>
+  <!-- Nav Bar End -->
 
     <!-- Hero Start -->
-    <div class="hero" id="home">
-      <!-- <div class="container-fluid"> -->
-        <div class="row hero-row align-items-center abt">
-          <div class="col-sm-12 col-md-6">
-            <div class="hero-content">
+<div class="hero" id="home">
+  <div class="row hero-row align-items-center abt">
+      <div class="col-sm-12 col-md-6">
+          <div class="hero-content">
               <div class="hero-text">
-                <p>I'm</p>
-                <h1>Jeevan Hebbal Manjunath</h1>
-                <h2></h2>
-                <div class="typed-text">
-                  Data Scientist, NLP Engineer, Machine Learning Engineer, AI
-                  Engineer, DevOps Engineer
-                </div>
+                  <p>I'm</p>
+                  <h1>Jeevan Hebbal Manjunath</h1>
+                  <h2></h2>
+                  <div class="typed-text">
+                      Data Scientist, NLP Engineer, Machine Learning Engineer, AI
+                      Engineer, DevOps Engineer
+                  </div>
               </div>
               <div class="hero-btn">
-                <a class="btn" href="#contact" style="margin-bottom:15px">Contact Me</a>
+                  <a class="btn" href="#contact" style="margin-bottom:15px">Contact Me</a>
               </div>
-            </div>
           </div>
-          <div class="col-sm-12 col-md-6 d-none justify-content-end d-md-block">
-            <div class="hero-image">
-              <img src="/static/images/hero.jpg" alt="Hero Image" />
-            </div>
-          </div>
-        </div>
       </div>
-
-    <!-- Hero End -->
+      <div class="col-sm-12 col-md-6 d-none justify-content-end d-md-block">
+          <div class="hero-image">
+              <img src="/static/images/hero.jpg" alt="Hero Image" />
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Hero End -->
 
     <!-- About Start -->
     <div class="about wow fadeInUp" data-wow-delay="0.5s" id="about">
@@ -424,7 +401,7 @@ Contributed to web development initiatives aimed at creating a user-friendly web
             </div>
             <div class="testimonial-text">
               <p>
-                Jevan is fast learner and performance outstanding performance as an individual and team player also he has good technical & analytical skills
+                Jevan exhibits exceptional learning abilities and consistently delivers outstanding performance, both as an individual contributor and a valuable team player. Additionally, he possesses strong technical and analytical skills.
               </p>
               <h3>Ajit Kumar</h3>
               <h4>Sr. Software Developer <i>@Digilocker</i></h4>
@@ -561,7 +538,7 @@ Contributed to web development initiatives aimed at creating a user-friendly web
                 <a href="https://www.linkedin.com/in/jeevan-h-m-7ba7b5182/"><i class="fab fa-linkedin-in"></i></a>
                   <br>
               </div>
-              <a href="https://drive.google.com/file/d/11z5UF0qiVZ__1u6kJolsSxHFQxd4qJEX/view?usp=sharing"class="btn download" download="Jeevan H M Resume">Download CV</a>
+              <a href="https://drive.google.com/file/d/11z5UF0qiVZ__1u6kJolsSxHFQxd4qJEX/view?usp=sharing"class="btn more download" download="Jeevan H M Resume">Download CV</a>
           </div>
           </div>
           <div class="contact-right">
@@ -570,7 +547,7 @@ Contributed to web development initiatives aimed at creating a user-friendly web
               <input type="email" name="Email" placeholder="Your Email" required>
               <input type="Subject" name="Subject" placeholder="Subject" required>
               <textarea name="Message" rows="3" placeholder="Message"></textarea>
-              <div id="typing-system-container" class="messages__item messages__item--visitor">
+              <div id="typing-system-container">
                 <button type="submit" class="btn form-submit">Submit</button>
                 <span id="msg"></span>
               </div>
@@ -625,8 +602,8 @@ Contributed to web development initiatives aimed at creating a user-friendly web
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script src="{{ url_for('static', filename='waypoints.min.js') }}""></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js"></script>
+    <script src="{{ url_for('static', filename='waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='typed.min.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>

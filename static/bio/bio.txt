@@ -48,23 +48,23 @@ Developed a Flask API using fuzzy logic and soundex for similarity scoring of tw
 Project: Real and Fake Face Detection (Company Project)
 Developed a model for real-time detection and classification of real faces from fake faces (>0.95 precision, >0.92 recall).
 
-Personal Projects:
-1. Podcast Generator with AI Voice Cloning and GPT-4 (Aug 2023 to Sept 2023)
+
+Project: Podcast Generator with AI Voice Cloning and GPT-4 (Aug 2023 to Sept 2023) - https://github.com/Jeevan-HM/AI-podcast
 Created podcasts using GPT for content generation and replicated YouTube speaker voices.
 Employed advanced prompt engineering techniques to maintain 95% coherence and relevance.
 Developed a user-friendly web interface using Flask.
 
-2. FinBot (Sept 2023 to Oct 2023)
+Project: FinBot (Sept 2023 to Oct 2023) - https://github.com/Jeevan-HM/FinBot
 Developed a Django web app integrating a chatbot for chatbot-related discussions.
 Achieved 95% accuracy in extracting responses from diverse sources via web scraping.
 Implemented Chromadb for efficient data storage on an AWS EC2 server.
 
-3. Health Monitoring Service (March 2023 to May 2023)
+Project: Health Monitoring Service (March 2023 to May 2023) - https://github.com/Jeevan-HM/Health-Analyzing-Service
 Developed a Health Analysis Service using GPT-3.5 Turbo API for processing health data from Apple Watch.
 Achieved 93% accuracy in health assessment.
 Implemented a user-friendly website and integrated a 16x2 LCD with a Raspberry Pi.
 
-4. Automated Shopping Cart (Jun 2022 to July 2023)
+Project: Automated Shopping Cart (Jun 2022 to July 2023) - https://github.com/Jeevan-HM/Automated-Shopping-Cart
 Developed a Raspberry Pi-based supermarket cart system with computer vision for 98% barcode scanning accuracy.
 Integrated a 16x2 LCD for real-time product details, purchase history, and total bill.
 Enabled seamless transactions with QR code generation for digital payments.

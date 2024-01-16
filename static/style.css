@@ -146,7 +146,6 @@ a:focus {
     color: #414141;
 }
 
-
 /**********************************/
 /*********** Nav Bar CSS **********/
 /**********************************/
@@ -154,8 +153,6 @@ a:focus {
     position: relative;
     transition: .5s;
     width: 100% !important; 
-    /* border-bottom: 1px dashed rgba(256, 256, 256, .2);
-    z-index: 9; */
 }
 
 .navbar.nav-sticky {
@@ -163,7 +160,6 @@ a:focus {
     top: 0;
     width: 100%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
-    
 
 }
 
@@ -174,7 +170,6 @@ a:focus {
     font-weight: 700;
     letter-spacing: 2px;
     transition: .5s;
-    
 }
 
 .navbar .navbar-brand img {
@@ -195,28 +190,28 @@ a:focus {
         width: 100% !important; 
         padding: 30px 30px 60px 10px;
         background: transparent !important;
-        /* border-bottom: 1px dashed rgba(256, 256, 256, .2); */
         z-index: 9;
         margin-bottom: 150px;
         left:0;
         right: 0;
     }
-    
+
     .navbar.nav-sticky {
-        padding: 10px 60px;
+        padding: 10px 30px;
         padding-bottom: 25px;
         background: #080808 !important;
     }
+
     .navbar .navbar-brand {
         color: #ffffff;
-        /* margin-top: 25px; */
         margin: 25px;
     }
-    
-    .brand-letter{
-        color:#ff004f;
+
+    .brand-letter {
+        color: #ff004f;
         font-size: 100px;
     }
+
     .navbar.nav-sticky .navbar-brand {
         color: #fff;
     }
@@ -228,7 +223,7 @@ a:focus {
         font-size: 18px;
         font-weight: 500;
     }
-    
+
     .navbar-dark.nav-sticky .navbar-nav .nav-link,
     .navbar-dark.nav-sticky .navbar-nav .nav-link:focus {
         color: #414141;
@@ -238,10 +233,17 @@ a:focus {
     .navbar-dark .navbar-nav .nav-link.active {
         color: #ff004f;
     }
-    
+
     .navbar-dark.nav-sticky .navbar-nav .nav-link:hover,
     .navbar-dark.nav-sticky .navbar-nav .nav-link.active {
         color: #ff004f;
+    }
+}
+
+/* Additional styles for collapsed state */
+@media (max-width: 999px) {
+    .navbar.nav-sticky {
+        padding: 10px 20px; /* Adjust padding for collapsed state */
     }
 }
 
@@ -276,7 +278,7 @@ a:focus {
         padding: 5px;
     }
     .navbar.nav-sticky {
-        padding: 10px 60px;
+        padding: 10px 30px;
         padding-bottom: 25px;
         background: #080808 !important;
     }
@@ -1035,7 +1037,7 @@ a:focus {
     padding: 65px 35px 30px 35px;
     text-align: center;
     background: #ffffff;
-    border-radius: 500px;
+    border-radius: 100px;
 }
 
 .testimonial .testimonial-item p {
@@ -1214,11 +1216,12 @@ a:focus {
 }
 
 .contact-social a:hover{
-    color:#ff004f;
+    color:#ff004f !important;
     transform:translateY(-5px);
 }
 
 .download{
+    
     display: inline-block;
     margin-top:50px;
     margin-bottom:50px;
@@ -1236,13 +1239,15 @@ a:focus {
     border-bottom-right-radius: 50px;
         
     }
+
 .download:hover{
-        color: #ff004f;
-        background: #fff;
-        border-color: #ff004f;
-        box-shadow: inset 0 0 0 0 #ff004f;
-        text-decoration: none;
+    color: #ff004f;
+    background: #fff;
+    border-color: #ff004f;
+    box-shadow: inset 0 0 0 0 #ff004f;
+    text-decoration: none;
     }
+
 .form-submit{
         display: inline-block;
         /* margin-top:50px; */
@@ -1358,7 +1363,7 @@ form input, form textarea{
 
 /* CONTENT IS CLOSE */
 .chatbox__support {
-    display: flex;
+    display: none;
     flex-direction: column;
     background: #eee;
     width: 300px;
@@ -1366,11 +1371,14 @@ form input, form textarea{
     z-index: -123456;
     opacity: 0;
     transition: all .5s ease-in-out;
+    
 }
 
 /* CONTENT ISOPEN */
 .chatbox--active {
+    display: flex;
     transform: translateY(-40px);
+    transition: all .5s ease-in-out;
     z-index: 123456;
     opacity: 1;
 
@@ -1441,14 +1449,34 @@ form input, form textarea{
     bottom: 20px;
     z-index: 9;
     background: linear-gradient(rgb(0 0 0 / 95%), rgb(76 11 19 / 95%));
-    height: 700px;
-    width: 400px;
+    height: 70%;
+    height: 70%;
+    width: 80%;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
     margin-bottom: 60px
+}
+
+@media(min-width: 700px){
+    .chatbox__support {
+
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 9;
+        background: linear-gradient(rgb(0 0 0 / 95%), rgb(76 11 19 / 95%));
+        height: 600px;
+        width: 400px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        margin-bottom: 60px
+    }
 }
 
 /* HEADER */
