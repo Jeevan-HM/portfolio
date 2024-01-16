@@ -1,6 +1,6 @@
 from langchain import hub
 from langchain_community.vectorstores import FAISS
-from langchain_core.runnables import RunnablePassthrough
+from langchain_core.runnables import RunnablePassthrough, RunnableLambda
 from langchain_core.output_parsers import StrOutputParser
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -36,6 +36,31 @@ class CreateDocument:
         docsearch.save_local("faiss_index")
 
 
+class CreateFile:
+    def __init__(self):
+        """
+        The function initializes an instance of the DirectoryLoader class from the
+        langchain_community.document_loaders module, with a specified directory path.
+        """
+        from langchain_community.document_loaders.text import TextLoader
+
+        self.text_loader = TextLoader("test.txt")
+
+    def create_documents(self):
+        """
+
+        The function `create_documents` creates and saves a FAISS index for a collection of documents,
+        using OpenAI embeddings and a text splitter.
+        """
+        self.embeddings = OpenAIEmbeddings()
+        docs = self.text_loader.load()
+        text_splitter = RecursiveCharacterTextSplitter(
+            chunk_size=1000, chunk_overlap=200
+        )
+        splits = text_splitter.split_documents(docs)
+        return splits
+
+
 # The `RAGChain` class is a Python implementation of a RAG (Retrieval-Augmented Generation) model that
 # uses OpenAI's GPT-3.5-turbo for question answering and document retrieval.
 class RAGChain:
@@ -49,7 +74,6 @@ class RAGChain:
         self.retriever = self.vectorstore.as_retriever()
         self.prompt = ""
         # self.prompt = hub.pull("rlm/rag-prompt")
-        print(self.prompt)
         self.llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0)
 
     def format_docs(self, docs):
@@ -63,7 +87,7 @@ class RAGChain:
         """
         return "\n\n".join(doc.page_content for doc in docs)
 
-    def run_rag_chain(self, query):
+    def run_rag_chain(self, query, memory):
         """
         The function `run_rag_chain` runs a RAG (Retrieval-Augmented Generation) chain with a given
         query.
@@ -74,24 +98,26 @@ class RAGChain:
         """
 
         prompt_template = """You are a J.A.I.D. (Jeevan's Artificial Intelligence Delegate) AI assistant designed using RAG dedicated to Jeevan. Ensure all the rules are followed.
-        1. All responses should be kept professional.
-        2. All information should be relavent and concise.
-        3. The response should be short 2-3 lines unless user asks for a detailed explaination.
-        4. If any information is not provided in the context, let the user know that you do not have information on that and it would be better to contact me directly.Also provide them with contact information.
-        5. Ensure that all points are in new lines.
+        1. All information should be relavent and concise.
+        2. If user asks for more information not available then ask them to contact me directly and provide contact information.
+        3. Keep the responses concise and short.
+        4. If user wants to end the chat the add "clear_chat_history" at the end of the response.
         
+        **Chat History**
+        {history}
 
+        **Context**
         {context}
 
         Question: {question}
         Helpful Answer:"""
         self.prompt = PromptTemplate(
-            template=prompt_template, input_variables=["context", "question"]
+            template=prompt_template, input_variables=["history", "context", "question"]
         )
-
         """Run the RAG chain with the given query."""
         rag_chain = (
             {
+                "history": RunnableLambda(lambda history: memory),
                 "context": self.retriever | self.format_docs,
                 "question": RunnablePassthrough(),
             }

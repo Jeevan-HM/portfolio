@@ -102,6 +102,13 @@ a:focus {
     visibility: visible;
     opacity: 1;
 }
+@media screen and (max-width: 991px) {
+    #navbarCollapse {
+        background: #080808;
+        opacity: 0.8;
+    }
+}
+
 
 #loader .loader {
     position: relative;
@@ -195,7 +202,7 @@ a:focus {
         left:0;
         right: 0;
     }
-
+    
     .navbar.nav-sticky {
         padding: 10px 30px;
         padding-bottom: 25px;
@@ -1296,7 +1303,7 @@ form input, form textarea{
 
   /* Add a media query for small screens */
 @media (min-width: 300px) {
-    body{
+    .read-more-btn{
         text-align: center;
     }
     .contact-row {
@@ -1316,6 +1323,7 @@ form input, form textarea{
     }
     .contact-left{
         flex-basis: 50%;
+        text-align: center;
     }
     .contact-right{
         flex-basis: 50%;
