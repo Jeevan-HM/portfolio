@@ -1,4 +1,3 @@
-from langchain import hub
 from langchain_community.vectorstores import FAISS
 from langchain_core.runnables import RunnablePassthrough, RunnableLambda
 from langchain_core.output_parsers import StrOutputParser
@@ -97,11 +96,11 @@ class RAGChain:
         :return: The run_rag_chain function returns the result of the RAG chain execution.
         """
 
+        # 4. If user wants to end the chat the add "clear_chat_history" at the end of the response.
         prompt_template = """You are a J.A.I.D. (Jeevan's Artificial Intelligence Delegate) AI assistant designed using RAG dedicated to Jeevan. Ensure all the rules are followed.
         1. All information should be relavent and concise.
         2. If user asks for more information not available then ask them to contact me directly and provide contact information.
         3. Keep the responses concise and short.
-        4. If user wants to end the chat the add "clear_chat_history" at the end of the response.
         
         **Chat History**
         {history}

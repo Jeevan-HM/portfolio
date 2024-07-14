@@ -1,8 +1,10 @@
-from flask import Flask, render_template, request, jsonify
-import chatbot
-from dotenv import load_dotenv
 import os
+
+from dotenv import load_dotenv
+from flask import Flask, jsonify, render_template, request
 from flask_cors import CORS
+
+import chatbot
 
 load_dotenv()
 
