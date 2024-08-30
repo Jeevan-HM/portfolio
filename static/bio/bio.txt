@@ -11,6 +11,9 @@ Form: Submit message through the form at the end of the page.
 About:
 I am a self-taught AI programmer who loves to create and cooperate. I have learned machine learning and data science and built amazing projects in image processing, machine learning and generative AI. I am always curious to explore new things and work with other AI lovers and experts who share my passion.
 Education:
+Arizona State University, Tempe, Arizona, USA
+Masters of Science, Robotics and Autonomous Systems - System Engineering
+Aug 2024-Present
 Brindavan College Of Engineering, Bangalore, India
 Bachelor of Engineering, Electronics and Communication Engineering
 Aug 2023
