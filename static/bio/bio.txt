@@ -1,95 +1,115 @@
-Name: Mr. Jeevan Hebbal Manjunath
+Mr. Jeevan Hebbal Manjunath
 
-Contact Information:
+
+Contact Information
+
+Location: Tempe, AZ, USA
 Email: jeevanhm308@gmail.com
-Phone: 9483871964
+Phone: +1 (415) 214-4572
 LinkedIn: https://www.linkedin.com/in/jeevan-h-m-7ba7b5182/
 GitHub: https://github.com/Jeevan-HM
 Twitter: https://twitter.com/Jeevan_H_M
-Form: Submit message through the form at the end of the page.
-
-About:
-I am a self-taught AI programmer who loves to create and cooperate. I have learned machine learning and data science and built amazing projects in image processing, machine learning and generative AI. I am always curious to explore new things and work with other AI lovers and experts who share my passion.
-Education:
-Arizona State University, Tempe, Arizona, USA
-Masters of Science, Robotics and Autonomous Systems - System Engineering
-Aug 2024-Present
-Brindavan College Of Engineering, Bangalore, India
-Bachelor of Engineering, Electronics and Communication Engineering
-Aug 2023
-CGPA: 8.83/10.0 (Ranked first in the university)
-
-Professional Experience:
-Jupiter AI Labs, Bangalore, India (Freelance Machine Learning Engineer)
-Aug 2023 to Dec 2023
-Project: Lawn AI (Company Project)
-Streamlined property information extraction, achieving >90% precision in drawing boundary lines.
-Attained 95% segmentation accuracy using Yolo V8 model on a dataset of 1700+ labeled and augmented images.
-Implemented a square footage determination model with <15% mean absolute error.
-Project: Honey Bot (Company Project)
-Developed and deployed a Rasa chatbot for health-related discussions, integrating ChatGPT for improved query handling.
-Implemented a vector database for clinic recommendations, ensuring personalized assistance for user inquiries.
-
-Jupiter AI Labs, Bangalore, India (Machine Learning Intern)
-Sept 2022 to Dec 2022
-Project: Real-Time Cargo Detection and Counting (Company Project)
-Built a model for real-time detection, tracking, and counting of cargo undocked from a ship (65% accuracy).
-Implemented motion tracking using detectron2 for a 25% increase in count accuracy.
-Project: Development and Testing for UpGrad (Company Project)
-Designed exercises on topics like Flask API, Fast API, Data Processing, model training, evaluation, hyperparameter tuning, and visualization (>85% accuracy).
-Tested exercises using unit testing and pytest, achieving 95% coverage.
-
-Incipient Technologies Private Limited, Bangalore, India (Data Science Intern)
-Aug 2021 to Nov 2021
-Engaged in confidential projects focused on achieving 95% accuracy in object detection.
-Contributed to web development initiatives aimed at creating a user-friendly website.
-
-DigiLocker, Bangalore, India (Backend Development Intern)
-Sept 2020 to Dec 2020
-Project: Name Match Algorithm (Company Project)
-Developed a Flask API using fuzzy logic and soundex for similarity scoring of two names (>93% accuracy).
-Project: Real and Fake Face Detection (Company Project)
-Developed a model for real-time detection and classification of real faces from fake faces (>0.95 precision, >0.92 recall).
+YouTube: https://www.youtube.com/@jeevanhm3872 
+Contact Form: Submit a message through the form at the end of the page.
 
 
-Project: Podcast Generator with AI Voice Cloning and GPT-4 (Aug 2023 to Sept 2023) - https://github.com/Jeevan-HM/AI-podcast
-Created podcasts using GPT for content generation and replicated YouTube speaker voices.
-Employed advanced prompt engineering techniques to maintain 95% coherence and relevance.
-Developed a user-friendly web interface using Flask.
+Professional Summary
 
-Project: FinBot (Sept 2023 to Oct 2023) - https://github.com/Jeevan-HM/FinBot
-Developed a Django web app integrating a chatbot for chatbot-related discussions.
-Achieved 95% accuracy in extracting responses from diverse sources via web scraping.
-Implemented Chromadb for efficient data storage on an AWS EC2 server.
+Self-taught AI and Robotics engineer specializing in ROS/ROS 2, sensor fusion, and learning‑based control. Current work spans closed‑loop modeling for pneumatic systems and quadruped locomotion with sim‑to‑real transfer. Industry experience includes productionizing YOLOv8 instance segmentation services and deploying RAG‑based assistants with evaluation guardrails. Comfortable across Python/C++, PyTorch, SLAM/Cartographer, EKF/UKF, and Docker/AWS.
 
-Project: Health Monitoring Service (March 2023 to May 2023) - https://github.com/Jeevan-HM/Health-Analyzing-Service
-Developed a Health Analysis Service using GPT-3.5 Turbo API for processing health data from Apple Watch.
-Achieved 93% accuracy in health assessment.
-Implemented a user-friendly website and integrated a 16x2 LCD with a Raspberry Pi.
 
-Project: Automated Shopping Cart (Jun 2022 to July 2023) - https://github.com/Jeevan-HM/Automated-Shopping-Cart
-Developed a Raspberry Pi-based supermarket cart system with computer vision for 98% barcode scanning accuracy.
-Integrated a 16x2 LCD for real-time product details, purchase history, and total bill.
-Enabled seamless transactions with QR code generation for digital payments.
+Education
 
-Publications:
-1. Automated Shopping Cart ResearchGate (Aug 2022): https://www.researchgate.net/publication/362900257_Automated_Shopping_Cart
-2. Smart Health Monitoring and Analyzing Service ResearchGate (April 2023): https://www.researchgate.net/publication/370410962_SMART_HEALTH_MONITORING_AND_ANALYZING_SERVICE
+Arizona State University, Tempe, AZ — M.S., Robotics & Autonomous Systems (GPA: 3.78/4.0), Expected May 2026
+Brindavan College of Engineering (VTU), Bengaluru, India — B.E., Electronics & Communication Engineering — CGPA: 8.83/10.0 (approx. 3.8/4.0); Ranked First in the University — June 2023
 
-Volunteer Experience:
+
+Research Experience
+
+Researcher — RISE Lab, Arizona State University | Tempe, AZ | Jun 2025 – Present
+
+Built an automated ROS + Python pipeline to capture high-frequency pneumatic pressure streams and motion-capture trajectories with precise time-sync and validation, producing an analysis-ready, high-dimensional time-series dataset for control modeling.
+Analyzed system dynamics (MATLAB + Python) to surface temporal dependencies and transients; insights informed feature engineering for downstream closed-loop controllers.
+Led baseline pneumatic control modeling (regularized linear regression + scikit-learn GridSearchCV), achieving a 7% improvement in control accuracy vs. baseline.
+Collaborated with ASU and Virginia Tech on nonlinear, closed-loop strategies: real-time forecasting with AutoTS, LSTM controllers, and policy-gradient RL to enhance stability and adaptive response.
+
+Research Aide — IDEA Lab, Arizona State University | Tempe, AZ | Sep 2024 – Jun 2025
+
+Automated a ROS data system for a quadruped: synchronized multi-modal sensors (IMU, camera, LiDAR) and applied Kalman filtering to obtain high-fidelity pose and velocity estimates for stable locomotion and mapping.
+Built a MuJoCo training environment and implemented PPO to learn walking, pacing, and trotting gaits with policies designed for real-world transfer.
+Executed sim-to-real transfer of learned gait parameters; delivered a Flask-based UI for real-time state visualization and parameter tuning, accelerating on-robot experiments.
+
+
+Industry Experience
+Machine Learning Engineer (Freelance/Contract) — Jupiter AI Labs | Bengaluru, India | Aug 2023 – Jan 2024
+
+Productionized a YOLOv8 instance‑segmentation service estimating parcel lawn area from Regrid API + satellite imagery; shipped a hardened Flask API on AWS with S3 integration, authentication, and tests.
+Project: Lawn AI — Streamlined property information extraction, achieving >90% precision in drawing boundary lines; attained ~95% segmentation accuracy on 1,700+ labeled/augmented images; implemented square‑footage estimation with <15% mean absolute error.
+Project: Honey Bot — Developed and deployed a Rasa chatbot for health‑related queries, integrating GPT‑3.5/ChatGPT for improved handling; implemented a vector database (ChromaDB) for clinic recommendations and personalized assistance with retrieval guardrails.
+
+Machine Learning Intern — Jupiter AI Labs | Bengaluru, India | Sep 2022 – Dec 2022
+Real‑Time Cargo Detection & Counting — Built a model for real‑time detection, tracking, and counting of cargo undocked from a ship (65% accuracy); implemented motion tracking using Detectron2, increasing count accuracy by ~25%.
+Development & Testing for UpGrad — Designed exercises covering Flask API, FastAPI, data processing, model training/evaluation, hyperparameter tuning, and visualization (>85% automated‑grading accuracy). Implemented unit tests/pytest achieving ~95% coverage.
+
+Data Science Intern — Incipient Technologies Pvt. Ltd. | Bengaluru, India | Aug 2021 – Nov 2021
+Worked on confidential object‑detection projects targeting ~95% accuracy.
+Contributed to web development efforts to improve user experience and site usability.
+Backend Development Intern — DigiLocker (Govt. of India) | Bengaluru, India | Sep 2020 – Dec 2020
+Name Match Algorithm — Developed a Flask API using fuzzy logic and Soundex for similarity scoring of two names (>93% accuracy).
+Real vs. Fake Face Detection — Built a real‑time model to classify real vs. spoofed faces (>0.95 precision, >0.92 recall).
+
+
+Projects
+
+Robotics Research Projects
+
+Fusion Robotics: Autonomous Quadruped–UR5 Testbed — Integrated a ROS 2 testbed (Unitree Go2 + UR5) with 5+ custom nodes for control and state synchronization; delivered a web UI for real‑time telemetry and tuning of 8+ gait parameters; automated experiment loop to improve research throughput.
+Drift‑Reduced Semantic Visual Odometry — Developed a hybrid VO framework combining a real‑time OCC‑VO front end with a UC‑NeRF‑inspired refinement module; closed the loop by reinjecting refined poses to reduce drift and improve semantic map consistency on nuScenes.
+Nav‑Fusion: Autonomous Navigation with TurtleBot4 — Deployed an end‑to‑end ROS 2 navigation stack on TurtleBot4: LiDAR/camera/IMU fusion, Cartographer SLAM, and Nav2/AMCL with custom behavior trees for robust multi‑room navigation and dynamic obstacle avoidance.
+
+Applications & AI Projects
+
+Podcast Generator with AI Voice Cloning & GPT‑4 (Aug 2023 – Sep 2023) — Flask web app to generate podcast episodes; applied prompt‑engineering for ~95% coherence/relevance; cloned YouTube speaker voices. Link: https://github.com/Jeevan-HM/AI-podcast
+FinBot (Sep 2023 – Oct 2023) — Django app with chatbot; integrated web scraping + ChromaDB on AWS EC2 for response retrieval; ~95% accuracy in extracting responses from diverse sources. Link: https://github.com/Jeevan-HM/FinBot
+Health Monitoring Service (Mar 2023 – May 2023) — Used GPT‑3.5 Turbo for Apple Watch data analysis; achieved ~93% accuracy in health assessment; shipped a simple web UI and Raspberry Pi + 16×2 LCD interface. Link: https://github.com/Jeevan-HM/Health-Analyzing-Service
+Automated Shopping Cart (Jun 2022 – Jul 2023) — Raspberry Pi supermarket cart with computer vision (98% barcode scanning accuracy), QR‑based checkout, and real‑time billing; 16×2 LCD for on‑cart details. Link: https://github.com/Jeevan-HM/Automated-Shopping-Cart
+
+
+Publications & Showcases:
+Adaptive Quadruped with Sensor Fusion for Precise Multi-Sensor Data Collection and Analysis: https://forge.engineering.asu.edu/participant/hebbal-manjunath-jeevan/ 
+Quadruped–UR5 at ASU Innovation Showcase: https://innovationshowcase.engineering.asu.edu/project/team-1-2/
+Automated Shopping Cart — ResearchGate (Aug 2022): https://www.researchgate.net/publication/362900257_Automated_Shopping_Cart
+SMART HEALTH MONITORING AND ANALYZING SERVICE — ResearchGate (Apr 2023): https://www.researchgate.net/publication/370410962_SMART_HEALTH_MONITORING_AND_ANALYZING_SERVICE
+
+
+Community & Volunteering
+
+ASU International Students & Scholars Center (ISSC) — Student Volunteer | Tempe, AZ
+Coordinated with fellow volunteers to plan and run ISSC events, collaborating across planning and day‑of execution.
+Communicated with attendees and staff to share schedules, answer questions, and manage check‑in lines.
+Supported logistics (setup/teardown, materials, space flow) to ensure smooth, welcoming experiences for international students.
+
 Community Empowerment
-Promoted digital payments, provided education in government schools, and advocated for waste disposal management in rural areas.
+
+Promoted digital payments, provided education in government schools, and advocated for waste‑disposal management in rural areas.
 Environmental Sustainability
 Raised awareness about proper waste and water management for a cleaner and more sustainable rural environment.
 
-Skills:
-Technical Skills
-Python, Django, Flask, FastAPI, Web Development, Data Structures, Algorithm, Generative AI, AutoML, GPT, Bert, LLM, RAG, Langchain, Prompt Engineering, AI, Machine Learning, Computer Vision, Generative AI, Natural Language Processing, Node.js, React.js, Azure Machine Learning, Git, Docker, Kubernetes, Jenkins, Serverless Computing, AWS/Azure DevOps, Testability, IoT
-Soft Skills
-Leadership, Enthusiastic, Critical Thinking, Innovation, Creativity, Strategic Thinking, Teamwork, Cross-Functional Collaboration, Communication, Research, Documentation, Organization
 
-Strengths:
-Eager to learn and quick on the uptake and understanding of new technology
+Skills
 
-Specializations: 
-AI, ML, Generative AI, Computer Vision
+Programming: Python, C++
+Robotics: ROS/ROS 2, SLAM (Cartographer), Nav2/AMCL, Sensor Fusion (EKF/UKF), MuJoCo, Isaac Sim
+AI/ML: PyTorch, scikit‑learn, TensorFlow, YOLO, CNNs, AutoML, Reinforcement Learning (PPO, LSTMs), Time‑Series Forecasting (AutoTS)
+NLP & LLMs: RAG, LangChain, Prompt Engineering, GPT‑3.5/4, BERT
+Web & Backend: Flask, FastAPI, Django, REST APIs, Node.js, React
+Cloud & DevOps: AWS, Azure ML, Azure DevOps, Docker, Kubernetes, Jenkins, CI/CD, Ansible, Serverless
+Data & Infra: Vector Databases (ChromaDB), SQL, Git, Linux, IoT (Raspberry Pi)
+Tools: MATLAB, SolidWorks
+Soft Skills: Leadership, Communication, Teamwork, Cross‑Functional Collaboration, Critical Thinking, Creativity, Strategic Thinking, Research, Documentation, Organization
+
+
+Strengths & Specializations
+
+Strengths: Eager to learn; quick to grasp and apply new technologies; able to build end‑to‑end robotics/ML pipelines from data acquisition to deployment.
+Specializations: Robotics, Artificial Intelligence (AI), Machine Learning (ML), Generative AI, Computer Vision

@@ -1,0 +1,22 @@
+[project]
+name = "portfolio"
+version = "0.3.0"
+description = "AI-powered portfolio chatbot using Google Gemini 2.5 Flash (100% FREE - No Embeddings!)"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    # Core Flask
+    "flask>=3.0.3",
+    "flask-cors>=5.0.0",
+    "gunicorn>=23.0.0",
+    "python-dotenv>=1.0.1",
+    
+    # LangChain with Google Gemini (FREE - No embeddings needed!)
+    "langchain>=0.3.7",
+    "langchain-core>=0.3.15",
+    "langchain-google-genai>=2.0.5",
+    "google-generativeai>=0.8.3",
+    
+    # Core utilities
+    "pydantic>=2.9.2",
+]

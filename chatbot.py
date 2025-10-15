@@ -1,139 +1,154 @@
-from langchain_community.vectorstores import FAISS
-from langchain_core.runnables import RunnablePassthrough, RunnableLambda
-from langchain_core.output_parsers import StrOutputParser
-from langchain_openai import ChatOpenAI, OpenAIEmbeddings
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.prompts import PromptTemplate
+"""
+Portfolio Chatbot using Google Gemini 2.5 Flash.
+
+This module implements a simple, efficient chatbot that uses Google's Gemini 2.5 Flash
+model for generating responses. It loads biographical content directly without requiring
+vector embeddings or FAISS indexing.
+"""
+
+import logging
+from pathlib import Path
+
 from dotenv import load_dotenv
+from langchain.prompts import ChatPromptTemplate
+from langchain_google_genai import ChatGoogleGenerativeAI
+
 load_dotenv()
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
-# The `CreateDocument` class is responsible for creating documents by loading text files from a
-# directory, splitting them into chunks, and saving them in a FAISS index for efficient searching.
-class CreateDocument:
-    def __init__(self):
+class SimpleChatbot:
+    """
+    Simple chatbot that loads biographical content and uses Google Gemini 2.5 Flash.
+
+    This chatbot provides an efficient question-answering system without requiring
+    vector embeddings or FAISS indexing. It loads biographical content at initialization
+    and includes it as context in each query to the language model.
+    """
+
+    def __init__(self, bio_dir: str = "static/bio") -> None:
         """
-        The function initializes an instance of the DirectoryLoader class from the
-        langchain_community.document_loaders module, with a specified directory path.
-        """
-        from langchain_community.document_loaders import DirectoryLoader
+        Initialize the chatbot with biographical content.
 
-        self.loader = DirectoryLoader("static/bio")
+        Args:
+            bio_dir: Directory containing biographical text files.
 
-    def create_documents(self):
         """
-
-        The function `create_documents` creates and saves a FAISS index for a collection of documents,
-        using OpenAI embeddings and a text splitter.
-        """
-        self.embeddings = OpenAIEmbeddings()
-        docs = self.loader.load()
-        text_splitter = RecursiveCharacterTextSplitter(
-            chunk_size=1000, chunk_overlap=200
+        self.bio_content = self._load_bio_content(bio_dir)
+        self.llm = ChatGoogleGenerativeAI(
+            model="gemini-2.5-flash",
+            temperature=0.7,
         )
-        splits = text_splitter.split_documents(docs)
 
-        docsearch = FAISS.from_documents(splits, self.embeddings)
-        docsearch.save_local("faiss_index")
-
-
-class CreateFile:
-    def __init__(self):
+    def _load_bio_content(self, bio_dir: str) -> str:
         """
-        The function initializes an instance of the DirectoryLoader class from the
-        langchain_community.document_loaders module, with a specified directory path.
-        """
-        from langchain_community.document_loaders.text import TextLoader
+        Load all text files from bio directory.
 
-        self.text_loader = TextLoader("test.txt")
+        Args:
+            bio_dir: Directory path containing text files.
 
-    def create_documents(self):
-        """
+        Returns:
+            Combined content from all text files.
 
-        The function `create_documents` creates and saves a FAISS index for a collection of documents,
-        using OpenAI embeddings and a text splitter.
         """
-        self.embeddings = OpenAIEmbeddings()
-        docs = self.text_loader.load()
-        text_splitter = RecursiveCharacterTextSplitter(
-            chunk_size=1000, chunk_overlap=200
+        bio_path = Path(bio_dir)
+        content_list = []
+
+        if not bio_path.exists():
+            logger.warning("Bio directory '%s' not found", bio_dir)
+            return ""
+
+        for file_path in bio_path.glob("*.txt"):
+            try:
+                with file_path.open(encoding="utf-8") as file_handle:
+                    content_list.append(file_handle.read())
+            except (OSError, ValueError) as error:
+                logger.warning("Could not read %s: %s", file_path, error)
+
+        combined_content = "\n\n".join(content_list)
+        logger.info(
+            "Loaded %d bio file(s), %d characters",
+            len(content_list),
+            len(combined_content),
         )
-        splits = text_splitter.split_documents(docs)
-        return splits
+        return combined_content
 
-
-# The `RAGChain` class is a Python implementation of a RAG (Retrieval-Augmented Generation) model that
-# uses OpenAI's GPT-3.5-turbo for question answering and document retrieval.
-class RAGChain:
-    def __init__(self):
+    def chat(self, user_query: str, chat_history: str = "") -> str | None:
         """
-        The above function initializes various components for a chatbot, including loading embeddings,
-        creating a vector store, setting up a retriever, and initializing a language model.
+        Generate a response to the user's query.
+
+        Args:
+            user_query: The user's question or message.
+            chat_history: Previous conversation history.
+
+        Returns:
+            The chatbot's response, or None if an error occurs.
+
         """
-        self.embeddings = OpenAIEmbeddings()
-        self.vectorstore = FAISS.load_local("faiss_index", self.embeddings)
-        self.retriever = self.vectorstore.as_retriever()
-        self.prompt = ""
-        # self.prompt = hub.pull("rlm/rag-prompt")
-        self.llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0)
+        # Create the prompt template
+        prompt = ChatPromptTemplate.from_messages(
+            [
+                (
+                    "system",
+                    """You are J.A.I.D. (Jeevan's Artificial Intelligence Delegate), an AI assistant dedicated to helping people learn about Jeevan Hebbal Manjunath.
 
-    def format_docs(self, docs):
-        """
-        The `format_docs` function takes a list of documents and returns a formatted string with the
-        page content of each document separated by two newlines.
+**Instructions:**
+1. Use the context below to answer questions about Jeevan accurately and concisely.
+2. Keep responses friendly, professional, and to the point.
+3. If asked about information not in the context, politely suggest contacting Jeevan directly and provide contact information.
+4. Be helpful and engaging in your responses.
 
-        :param docs: A list of documents
-        :return: a string that contains the page content of each document in the list, separated by two
-        newline characters.
-        """
-        return "\n\n".join(doc.page_content for doc in docs)
+**Context about Jeevan:**
+{bio_content}
 
-    def run_rag_chain(self, query, memory):
-        """
-        The function `run_rag_chain` runs a RAG (Retrieval-Augmented Generation) chain with a given
-        query.
-
-        :param query: The query is the input question or statement that the user wants to ask or discuss
-        with the AI assistant. It is the main input for the RAG chain to generate a helpful answer
-        :return: The run_rag_chain function returns the result of the RAG chain execution.
-        """
-
-        # 4. If user wants to end the chat the add "clear_chat_history" at the end of the response.
-        prompt_template = """You are a J.A.I.D. (Jeevan's Artificial Intelligence Delegate) AI assistant designed using RAG dedicated to Jeevan. Ensure all the rules are followed.
-        1. All information should be relavent and concise.
-        2. If user asks for more information not available then ask them to contact me directly and provide contact information.
-        3. Keep the responses concise and short.
-        
-        **Chat History**
-        {history}
-
-        **Context**
-        {context}
-
-        Question: {question}
-        Helpful Answer:"""
-        self.prompt = PromptTemplate(
-            template=prompt_template, input_variables=["history", "context", "question"]
-        )
-        """Run the RAG chain with the given query."""
-        rag_chain = (
-            {
-                "history": RunnableLambda(lambda history: memory),
-                "context": self.retriever | self.format_docs,
-                "question": RunnablePassthrough(),
-            }
-            | self.prompt
-            | self.llm
-            | StrOutputParser()
+**Previous Chat History:**
+{chat_history}""",
+                ),
+                ("human", "{user_query}"),
+            ],
         )
 
         try:
-            result = rag_chain.invoke(query)
-            return result
-        except Exception as e:
-            print(f"Error during RAG chain execution: {e}")
+            # Format the prompt with context
+            formatted_prompt = prompt.format_messages(
+                bio_content=self.bio_content,
+                chat_history=chat_history if chat_history else "No previous messages",
+                user_query=user_query,
+            )
+
+            # Get response from Gemini
+            llm_response = self.llm.invoke(formatted_prompt)
+            response_content = llm_response.content
+
+            # Ensure we return a string
+            if isinstance(response_content, str):
+                return response_content
+            return str(response_content)
+
+        except (OSError, ValueError):
+            logger.exception("Error during chat")
             return None
 
 
-# doc = CreateDocument()
-# doc.create_documents()
+# Legacy compatibility - keep old class name
+class RAGChain(SimpleChatbot):
+    """Legacy class name for backward compatibility."""
+
+    def __init__(self):
+        """Initialize with default settings."""
+        super().__init__()
+
+    def run_rag_chain(self, query: str, memory: str) -> str | None:
+        """
+        Legacy method name for backward compatibility.
+
+        Args:
+            query: User's question.
+            memory: Chat history.
+
+        Returns:
+            Chatbot response or None if error occurs.
+
+        """
+        return self.chat(query, memory)
