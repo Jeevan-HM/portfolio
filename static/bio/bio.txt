@@ -21,7 +21,7 @@ Self-taught AI and Robotics engineer specializing in ROS/ROS 2, sensor fusion, a
 Education
 
 Arizona State University, Tempe, AZ — M.S., Robotics & Autonomous Systems (GPA: 3.78/4.0), Expected May 2026
-Brindavan College of Engineering (VTU), Bengaluru, India — B.E., Electronics & Communication Engineering — CGPA: 8.83/10.0 (approx. 3.8/4.0); Ranked First in the University — June 2023
+Visvesvaraya Technological University, Bengaluru, India — B.E., Electronics & Communication Engineering — CGPA: 8.83/10.0 (approx. 3.8/4.0); Ranked First in the University — June 2023
 
 
 Research Experience
