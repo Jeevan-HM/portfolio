@@ -210,16 +210,9 @@ This project is licensed under the MIT License.
 ## 👨‍💻 Author
 
 **Jeevan Hebbal Manjunath**
-- Portfolio: [Your Portfolio URL]
-- LinkedIn: [Your LinkedIn]
-- GitHub: [Your GitHub]
-
-## 🙏 Acknowledgments
-
-- Google Gemini 2.5 Flash for free AI capabilities
-- LangChain for the LLM framework
-- Flask for the web framework
+- LinkedIn: https://www.linkedin.com/in/jeevan-h-m
+- GitHub: https://github.com/Jeevan-HM 
 
 ---
 
-**Note**: This chatbot uses Google Gemini 2.5 Flash which is completely free for up to 60,000 requests per day. No credit card required!
+**Note**: This chatbot uses Google Gemini 2.5 Flash which is completely free for up to 60,000 requests per day. 
